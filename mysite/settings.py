@@ -24,7 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quadnews.pythonanywhere.com']
 
 
 # Application definition
@@ -57,8 +57,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'quadnews$quadnews',
+        'USER': 'quadnews',
+        'PASSWORD': 'Iboxcodes',
+        'HOST': 'quadnews.mysql.pythonanywhere-services.com',
     }
 }
 
